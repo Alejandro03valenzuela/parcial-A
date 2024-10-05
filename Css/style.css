@@ -1,0 +1,218 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilos del filtro */
+#filtro-categorias {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filtro-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.filtro-btn:hover {
+    background-color: #666;
+}
+
+/* Estilos de la lista de juegos usando Grid */
+#lista-juegos, #lista-favoritos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos de los juegos */
+.juego {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.juego:hover {
+    transform: translateY(-5px);
+}
+
+.jugar {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* Estilo del botón de favoritos */
+.favorito {
+    background-color: #007bff; /* Color inicial del botón */
+    border: none;
+    color: white; /* Texto blanco */
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Cambiar color al hacer clic */
+.favorito.clicked {
+    background-color: #ff0000; /* Color rojo cuando se hace clic */
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos específicos para el formulario de registro */
+#registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Responsivo para tablet y escritorio */
+@media (min-width: 768px) {
+    #lista-juegos, #lista-favoritos {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas más grandes en pantallas grandes */
+    }
+
+    form {
+        width: 60%; /* Formulario más ancho en pantallas grandes */
+    }
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin: 0 30px;
+    }
+
+    footer {
+        font-size: 1.2rem; /* Texto más grande en el footer */
+    }
+}
+
+/* Responsivo para dispositivos móviles */
+@media (max-width: 767px) {
+    #lista-juegos, #lista-favoritos {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas más pequeñas en pantallas móviles */
+    }
+
+    form {
+        width: 90%; /* Formulario más estrecho en móviles */
+    }
+
+    form label, form input, form button {
+        font-size: 1rem; /* Tamaño de fuente consistente */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Ajuste de tamaño de fuente */
+    }
+}
+
+.imagen-juego {
+    width: 100%; /* Ajusta la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio entre la imagen y el contenido */
+}

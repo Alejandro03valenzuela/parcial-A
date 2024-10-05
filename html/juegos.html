@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Juegos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Juegos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="juegos.html">Lista de Juegos</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+                <li><a href="regristro.html">Registro de Desarrolladores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="juegos">
+        <h2>Filtrar por Categoría</h2>
+        <div id="filtro-categorias">
+            <button class="filtro-btn" data-categoria="all">ALL</button>
+            <button class="filtro-btn" data-categoria="free-to-play">FREE TO PLAY</button>
+            <button class="filtro-btn" data-categoria="accion">ACCIÓN</button>
+            <button class="filtro-btn" data-categoria="sport">SPORT</button>
+            <button class="filtro-btn" data-categoria="adventure">ADVENTURE</button>
+        </div>
+
+        <div id="lista-juegos">
+            <!-- Los juegos se generarán dinámicamente aquí -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tienda Free-to-Play. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
